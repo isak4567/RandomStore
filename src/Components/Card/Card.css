@@ -1,0 +1,56 @@
+
+.cont-card {
+    cursor: pointer;
+    width: 260px;
+    height: 300px;
+}
+
+/* ######## Figure */
+.cont-card figure {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 8px;
+}
+
+.cont-card figure span {
+    position: absolute;
+    background-color: gray;
+    border-radius: 8px;
+    z-index: 2;
+    bottom: 10px;
+    left: 10px;
+    padding: 2px 4px;
+}
+
+.cont-card figure img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.cont-card figure div {
+    background-color: aliceblue;
+    position: absolute;
+    border-radius: 50%;
+    padding: 3px 7px;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+}
+
+.card-product-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+.card-product-text .text{
+    font-weight: lighter;
+}
+
+.card-product-text .price{
+    font-weight: bold;
+}
