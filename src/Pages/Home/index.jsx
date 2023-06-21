@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { RandomStoreContext } from "../../Context";
-import { Layout } from "../../Components/Layout";
-import { Card } from "../../Components/Card";
+import { Card, Layout, ProductDetail } from "../../Components";
+
 import './Home.css';
 
 
@@ -15,13 +15,10 @@ function Home() {
             Algo
             <div className="cont-products-home">
                 { products?.map((elem)=> {
-                    return <Card key={elem.id} 
-                    tag={elem.category.name} 
-                    name={elem.title} img={elem.images[0]}
-                    price={elem.price}
-                    />
+                    return <Card key={elem.id} elem={elem}/>
                 })}
             </div>
+            <ProductDetail />
         </Layout>
     );
 }

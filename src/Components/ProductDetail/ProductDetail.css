@@ -1,0 +1,26 @@
+
+.cont-ProductDetail {
+    height: 70vh;
+    width: 360px;
+    position: fixed;
+    right: 0;
+    top: 160px;
+    border-radius: 8px 0 0 8px;
+    padding: 20px;
+    background-color: aliceblue;
+    z-index: 3;
+}
+
+.cont-ProductDetail .title {
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+}
+
+.productDetail-close {
+    font-size: 24px;
+}
+
+.itemDetail-DS figure img {
+    width: 100%;
+}
