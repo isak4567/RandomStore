@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { RandomStoreContext } from "../../Context";
-import { Card, Layout, ProductDetail } from "../../Components";
+import { Card, Layout, ProductDetail, CompOrder } from "../../Components";
 
 import './Home.css';
 
@@ -19,6 +19,7 @@ function Home() {
                 })}
             </div>
             <ProductDetail />
+            <CompOrder />
         </Layout>
     );
 }

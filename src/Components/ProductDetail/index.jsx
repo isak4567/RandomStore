@@ -14,14 +14,13 @@ function ProductDetail( ) {
         <aside 
         className={ `cont-ProductDetail ${orderDS? '' : 'ds-none'}`} >
             <div className='title'>
-                <p>MyOrder</p>
+                <p>Detail of the product</p>
                 <AiFillCloseCircle 
                 onClick={() => setOrderDS(false)}
                 className="productDetail-close" />
             </div>
 
             <div className="itemDetail-DS">
-
                 <figure>
                     <img src={itemDetail?.images} alt="" />
                 </figure>
@@ -31,12 +30,7 @@ function ProductDetail( ) {
                     {/* <span className='price'>$0#%&</span> */}
                 </p>
                 <p className='card-product-text'>{itemDetail?.description}</p>
-
-
             </div>
-
-
-            
         </aside>
     );
 }

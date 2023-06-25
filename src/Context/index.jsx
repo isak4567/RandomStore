@@ -20,19 +20,22 @@ export function ProviderRandomStore ({children}) {
   }, []);
  
   // ######## Shopping Cart
+  const [cartShopDS, setCartShopDS] = useState(false);
   const [numCartShop, setNumCartShop] = useState(0);
+  const [cartListShop, setCartListShop] = useState([]);
 
   // ######## Product Detail
   const [orderDS, setOrderDS] = useState(false);
   const [itemDetail, setItemDetail] = useState({});
-  
 
   return (
     <RandomStoreContext.Provider value={{
         products, 
         numCartShop, setNumCartShop,
         orderDS, setOrderDS,
-        itemDetail, setItemDetail
+        itemDetail, setItemDetail,
+        cartListShop, setCartListShop,
+        cartShopDS, setCartShopDS
     }}>
         {children}
     </RandomStoreContext.Provider>
