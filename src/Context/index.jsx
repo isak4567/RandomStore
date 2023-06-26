@@ -24,6 +24,10 @@ export function ProviderRandomStore ({children}) {
   const [numCartShop, setNumCartShop] = useState(0);
   const [cartListShop, setCartListShop] = useState([]);
 
+  const AddShopingCart = () => {
+    const rep = cartListShop.findIndex((el)=> el === item);
+  }
+
   // ######## Product Detail
   const [orderDS, setOrderDS] = useState(false);
   const [itemDetail, setItemDetail] = useState({});

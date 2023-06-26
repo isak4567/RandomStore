@@ -9,6 +9,7 @@
     padding: 20px;
     background-color: aliceblue;
     z-index: 3;
+    overflow: scroll;
 }
 
 .cont-ProductDetail .title {
