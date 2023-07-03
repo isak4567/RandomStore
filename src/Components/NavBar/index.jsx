@@ -25,10 +25,6 @@ function NavBar() {
                     </li>
                     <li>
                         <NavLink className={`navLink`} 
-                        to={'/MyOrder'}>Order</NavLink>
-                    </li>
-                    <li>
-                        <NavLink className={`navLink`} 
                         to={'/MyOrders'}>MyOrders</NavLink>
                     </li>
                     <li>

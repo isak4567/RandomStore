@@ -1,12 +1,14 @@
-
+import { Layout } from "../../Components";
 
 
 function NotFound() {
     
     return(
-        <div>
-            Pagina no encontrada
-        </div>
+        <Layout>
+            <div>
+                Pagina no encontrada
+            </div>
+        </Layout>
     );
 }
 

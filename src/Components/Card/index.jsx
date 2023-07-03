@@ -19,7 +19,8 @@ function Card( {elem} ) {
         numCartShop, setNumCartShop,
         setOrderDS, setItemDetail,
         cartListShop, setCartListShop,
-        setCartShopDS
+        setCartShopDS,
+        totalPrice, setTotalPrice
     } = useContext(RandomStoreContext);
 
     const eventOnclick = (product) => {
@@ -39,6 +40,8 @@ function Card( {elem} ) {
         
         setNumCartShop(numCartShop+1);
         setCartShopDS(true);
+
+        setTotalPrice(totalPrice + item.price);
     };
     
     return(

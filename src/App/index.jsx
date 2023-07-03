@@ -8,8 +8,8 @@ const AppRoutes = () => {
   let routes = useRoutes([
     { path: '/', element: <Home /> },
     { path: '/MyAccount', element: <MyAccount /> },
-    { path: '/MyOrder', element: <MyOrder /> },
     { path: '/MyOrders', element: <MyOrders /> },
+    { path: '/MyOrders/*', element: <MyOrder /> },
     { path: '/*', element: <NotFound /> },
     { path: '/SigIn', element: <Sigin /> },
   ]);
