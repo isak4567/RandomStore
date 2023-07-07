@@ -13,7 +13,7 @@ function MyOrders() {
             Algo que ver en ordenes
             {myOrders?.map((elem, index) => {
                 return (
-                    <Link className="item-order" to={`/MyOrders/${index}`}>
+                    <Link key={`link-${index}`} className="item-order" to={`/MyOrders/${index}`}>
                         < CompOrders 
                         key={`comp-${elem.numItems+elem.cost}`} 
                         comp={elem}/>

@@ -6,7 +6,25 @@ import './NavBar.css';
 
 function NavBar() {
 
-    const {numCartShop} = useContext(RandomStoreContext);
+    const {
+        numCartShop, 
+        products,
+        setCopyProdructs,
+    } = useContext(RandomStoreContext);
+
+    const filtCategory = (e) => {
+        let find = e.target.innerHTML;
+
+        let newList = products.filter(obj => (
+            obj.category.name.toLowerCase().includes(find.toLowerCase())
+            ));
+
+        if (find === "All") {
+            setCopyProdructs(products);
+        } else {
+            setCopyProdructs(newList);
+        }
+    }
     
     return(
         <header>
@@ -14,6 +32,34 @@ function NavBar() {
             <h1>RamdomStore</h1>
 
             <nav>
+                <ul>
+                    <li>
+                        <button onClick={(e) => filtCategory(e)} 
+                        className={`navLink`}>All</button>
+                    </li>
+                    <li>
+                        <button onClick={(e) => filtCategory(e)} 
+                        className={`navLink`}>Electronics</button>
+                    </li>
+                    <li>
+                        <button onClick={(e) => filtCategory(e)} 
+                        className={`navLink`}>Clothes</button>
+                    </li>
+                    <li>
+                        <button onClick={(e) => filtCategory(e)} 
+                        className={`navLink`}>Shoes</button>
+                    </li>
+                    <li>
+                        <button onClick={(e) => filtCategory(e)} 
+                        className={`navLink`}>Furniture</button>
+                    </li>
+                    <li>
+                        <button onClick={(e) => filtCategory(e)} 
+                        className={`navLink`}>Others</button>
+                    </li>
+                </ul>
+
+
                 <ul>
                     <li>
                         <NavLink className={`navLink`} 

@@ -4,7 +4,6 @@ function Sigin() {
     
     return(
         <Layout>
-
             Entrar
         </Layout>
     );

@@ -8,6 +8,13 @@ header {
     justify-content: space-between;
 }
 
+nav {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav ul {
     list-style: none;
 } 
@@ -15,6 +22,12 @@ nav ul {
 nav ul li {
     padding: 8px;
     color: black;
+}
+
+nav ul li button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
 }
 
 .navLink {

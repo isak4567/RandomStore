@@ -7,18 +7,24 @@ export function ProviderRandomStore ({children}) {
   // ######## Products List
   const [products, setProducts] = useState([]);
 
+  const [copyProdructs, setCopyProdructs] = useState([]);
+
   useEffect(() => {
     
     try {
       fetch(`https://api.escuelajs.co/api/v1/products?offset=0&limit=10`)
         .then(response => response.json())
-        .then(data => setProducts(data))
+        .then(data => {
+          setProducts(data);
+          setCopyProdructs(data);
+        })
     } catch (error) {
       console.error(`Oh no, ocurrió un error: ${error}`);
     }
-      
+
   }, []);
  
+  
   // ######## Shopping Cart
   const [cartShopDS, setCartShopDS] = useState(false);
   const [numCartShop, setNumCartShop] = useState(0);
@@ -45,6 +51,7 @@ export function ProviderRandomStore ({children}) {
         cartShopDS, setCartShopDS,
         totalPrice, setTotalPrice,
         myOrders, setMyOrders,
+        copyProdructs, setCopyProdructs
     }}>
         {children}
     </RandomStoreContext.Provider>
