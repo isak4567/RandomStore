@@ -25,6 +25,9 @@ function Home() {
             <div>
                 AHHHHHHHHHHHHHHHHHHHHHHHHH
             </div>
+            <div>
+                AHHHHHHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!!!!
+            </div>
             <input 
              onChange={(e) => SearchHandler(e)}
              value={searchValue}
