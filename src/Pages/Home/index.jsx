@@ -22,7 +22,9 @@ function Home() {
 
     return(
         <Layout>
-            
+            <div>
+                AHHHHHHHHHHHHHHHHHHHHHHHHH
+            </div>
             <input 
              onChange={(e) => SearchHandler(e)}
              value={searchValue}
